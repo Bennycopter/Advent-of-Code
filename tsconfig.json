@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "lib": ["ES2023", "dom"],
+  },
+  "ts-node": {
+    "esm": true
+  }
+}
