@@ -1,6 +1,8 @@
 import { getInput } from "../../shared";
 
 export default function() {
+    // https://adventofcode.com/2023/day/1
+
     // Part 1 --
     // The calibration value of each line is formed
     // by the first digit and last digit of each line

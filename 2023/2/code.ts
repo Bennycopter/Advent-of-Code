@@ -1,6 +1,8 @@
 import { getInput } from "../../shared";
 
 export default function() {
+    // https://adventofcode.com/2023/day/2
+
     // Part 1 - Sum the game IDs that are possible with:
     // 12 red cubes
     // 13 green cubes

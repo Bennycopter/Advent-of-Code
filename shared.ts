@@ -12,7 +12,8 @@ export function getInput(id: string = null): string {
     const filename = id
         ? `input-${id}.txt`
         : "input.txt";
-    return fs.readFileSync(`./${getYear()}/${getDay()}/${filename}`, "utf-8");
+    return fs.readFileSync(`./${getYear()}/${getDay()}/${filename}`, "utf-8")
+        .replaceAll("\r", "");
 }
 
 export function sumArray(array: number[]): number {
