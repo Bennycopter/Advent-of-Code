@@ -16,22 +16,14 @@ export default function() {
         cards.push(card);
         part1Sum += card.calculatePoints();
     }
-
-    console.log(part1Sum);
     
-    // Part 2 -- Make copies of cards after each winner based on how many points the winning card was worth.
+    // Part 2 -- Make copies of cards after each winner based on how many matching numbers the winning card had
     for (let cardIndex = 0; cardIndex < cards.length; cardIndex++) {
         const card = cards[cardIndex];
-        console.log();
-        console.log();
-        console.log("Card", cardIndex+1);
-        console.log("Points", card.calculatePoints());
-        console.log("Num cards", card.numCards);
         const otherStartIndex = cardIndex+1;
         const otherEndIndex = Math.min(cards.length, otherStartIndex + card.numMyWinningNumbers());
         for (let i = 0; i < card.numCards; i++) {
             for (let otherIndex = otherStartIndex; otherIndex < otherEndIndex; otherIndex++) {
-                //console.log("Incrementing", otherIndex);
                 const otherCard = cards[otherIndex];
                 otherCard.numCards++;
             }
@@ -39,7 +31,9 @@ export default function() {
     }
 
     const part2Sum = cards.map(card=>card.numCards).reduce((p,c)=>p+c);
-    console.log(part2Sum);
+
+    console.log("Part 1", part1Sum);
+    console.log("Part 2", part2Sum);
 }
 
 class Card {
