@@ -16,18 +16,26 @@ else {
 import { getInput } from "../../shared";
 
 export default function() {
+    console.log("Test~~~");
+    runTodaysProgram(getInput("test"));
+    //console.log();
+    //console.log("Puzzle~~~");
+    //runTodaysProgram(getInput("puzzle"));
+}
+
+function runTodaysProgram(input: string) {
     // Puzzle: https://adventofcode.com/${year}/day/${day}
     
     // Part 1 -- 
     
-    const lines = getInput().split("\\n");
+    const lines = input.split("\\n");
     
     // ... your code here
     
     // Part 2 --
-    
 }
     
     `.trim());
-    fs.writeFileSync(`./${year}/${day}/input.txt`, `Paste input here from https://adventofcode.com/${year}/day/${day}/input`);
+    fs.writeFileSync(`./${year}/${day}/input-test.txt`, `Paste test input here from https://adventofcode.com/${year}/day/${day}`);
+    fs.writeFileSync(`./${year}/${day}/input-puzzle.txt`, `Paste puzzle input here from https://adventofcode.com/${year}/day/${day}/input`);
 }
