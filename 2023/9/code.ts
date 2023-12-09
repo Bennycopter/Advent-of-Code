@@ -10,15 +10,9 @@ export default function() {
 
 function runTodaysProgram(input: string) {
     // Puzzle: https://adventofcode.com/2023/day/9
-    
-    // Part 1 --
     const lines = input.split("\n").map(o=>new Line(o.split(" ").map(o=>parseInt(o))));
     console.log("Part 1 -", lines.reduce((p,c)=>p+c.getNextNumber(), 0));
     console.log("Part 2 -", lines.reduce((p,c)=>p+c.getPrevNumber(), 0));
-
-    // ... your code here
-    
-    // Part 2 --
 }
 
 class Line {
